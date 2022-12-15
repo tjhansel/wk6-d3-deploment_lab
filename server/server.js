@@ -17,7 +17,7 @@ app.use(express.json())
 // app.use(express.static(`/public`))
 app.use(express.static(`./public`))
 
-rollbar.log('Taco Tuesday')
+rollbar.log('EC2 Test')
 
 app.get('/', (req,res) => {
     res.status(200).sendFile(path.join(__dirname, '../public/index.html'))
@@ -26,7 +26,8 @@ app.get('/', (req,res) => {
 // try {
 //     nonExistentFunction();
 //   } catch (error) {
-//     console.error(error);
+//     console.error(error)
+//     rollbar.log(error)
 //   }
 
 
