@@ -20,7 +20,9 @@ app.use(express.static(`./public`))
 rollbar.log('EC2 Test')
 
 app.get('/', (req,res) => {
+    rollbar.log('user access page')
     res.status(200).sendFile(path.join(__dirname, '../public/index.html'))
+    
 })
 
 // try {
